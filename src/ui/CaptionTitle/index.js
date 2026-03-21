@@ -1,0 +1,1 @@
+export { CaptionTitle } from './CaptionTitle';

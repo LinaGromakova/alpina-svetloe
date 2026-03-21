@@ -1,0 +1,1 @@
+export { SectionPhilosophy } from './SectionPhilosophy';
