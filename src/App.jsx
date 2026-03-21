@@ -2,6 +2,7 @@ import { AboutSection } from './sections/AboutSection';
 import { ActivitiesSection } from './sections/ActivitiesSection';
 import { AmenitiesSection } from './sections/AmenitiesSection';
 import { ConceptSection } from './sections/ConceptSection';
+import { GallerySection } from './sections/GallerySection';
 import { LocationInfoSection } from './sections/LocationInfoSection';
 import { PreviewSection } from './sections/PreviewSection';
 import { RedLakeSection } from './sections/RedLakeSection';
@@ -18,6 +19,7 @@ function App() {
       <RedLakeSection></RedLakeSection>
       <ConceptSection></ConceptSection>
       <AmenitiesSection></AmenitiesSection>
+      <GallerySection></GallerySection>
     </div>
   );
 }
