@@ -1,0 +1,1 @@
+export { GradientSection } from './GradientSection';

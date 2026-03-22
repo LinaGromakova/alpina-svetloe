@@ -1,8 +1,8 @@
 import clsx from 'clsx';
 import { MainTitle } from '../../../ui/MainTitle';
 import { Paragraph } from '../../../ui/Paragraph';
-import { CaptionTitle } from '../../../ui/CaptionTitle';
 import { ListItem } from '../../../ui/ListItem';
+import { Logo } from '../../../ui/Logo';
 
 export function InfoColumn({
   className,
@@ -12,9 +12,17 @@ export function InfoColumn({
   infoType,
   subtitle,
   titleSize,
+  signature,
+  logo,
 }) {
   return (
     <article className={clsx('flex flex-col justify-center', className)}>
+      {logo && (
+        <Logo
+          variant='md'
+          className='mb-7'
+        ></Logo>
+      )}
       <MainTitle
         variant='dark-blue'
         text={title}
@@ -30,21 +38,27 @@ export function InfoColumn({
               key={index}
               text={el.text}
               className={parSize}
+              bold={el.bold}
             ></ListItem>
           ))}
+          {signature && (
+            <Paragraph
+              text={signature}
+              bold
+              className='ml-5'
+            ></Paragraph>
+          )}
         </ul>
       ) : (
         <>
           {info.map((el, index) => (
-            <>
-              {el.title && <CaptionTitle text={el.title}></CaptionTitle>}
-              <Paragraph
-                key={index}
-                text={el.text}
-                bold={el.bold}
-                className={parSize}
-              ></Paragraph>
-            </>
+            <Paragraph
+              key={index}
+              title={el?.title}
+              text={el.text}
+              bold={el.bold}
+              className={parSize}
+            ></Paragraph>
           ))}
         </>
       )}

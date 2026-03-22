@@ -7,7 +7,7 @@ export function MainTitle({ text, variant, titleSize }) {
     <h2
       className={clsx(
         style,
-        'font-bold mb-14',
+        'font-bold mb-10',
         titleSize === 'base' ? 'text-2xl' : 'text-[36px]',
       )}
     >
