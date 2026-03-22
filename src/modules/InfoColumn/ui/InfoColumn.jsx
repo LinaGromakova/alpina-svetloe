@@ -19,12 +19,11 @@ export function InfoColumn({
     <article className={clsx('flex flex-col justify-center', className)}>
       {logo && (
         <Logo
-          variant='md'
-          className='mb-7'
+          variant={logo.variant}
+          className={logo.styles}
         ></Logo>
       )}
       <MainTitle
-        variant='dark-blue'
         text={title}
         titleSize={titleSize}
       ></MainTitle>

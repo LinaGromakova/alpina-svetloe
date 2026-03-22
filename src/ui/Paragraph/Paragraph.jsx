@@ -4,7 +4,7 @@ export function Paragraph({ text, bold, className, title }) {
   return (
     <p
       className={clsx(
-        'text-2xl pb-6',
+        'text-2xl pb-4',
         bold ? 'text-dark-blue font-bold' : 'text-foreground',
         className,
       )}

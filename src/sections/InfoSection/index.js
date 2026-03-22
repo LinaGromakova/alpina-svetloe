@@ -1,1 +1,1 @@
-export { SectionInfo } from './SectionLayout';
+export { InfoSection } from './InfoSection';

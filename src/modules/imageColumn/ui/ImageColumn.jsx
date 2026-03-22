@@ -6,7 +6,7 @@ export function ImageColumn({ imageSrc, className }) {
       <img
         src={imageSrc}
         alt='imageColumn'
-        className='h-full w-full object-cover object-center '
+        className='h-full w-full object-cover'
       />
     </div>
   );
