@@ -16,7 +16,12 @@ export function InfoColumn({
   logo,
 }) {
   return (
-    <article className={clsx('flex flex-col justify-center', className)}>
+    <article
+      className={clsx(
+        'flex flex-col justify-center max-md:relative',
+        className,
+      )}
+    >
       {logo && (
         <Logo
           variant={logo.variant}
@@ -44,7 +49,7 @@ export function InfoColumn({
             <Paragraph
               text={signature}
               bold
-              className='ml-5'
+              className='ml-6'
             ></Paragraph>
           )}
         </ul>

@@ -7,7 +7,9 @@ export function GradientSection({ order, className = {}, info }) {
   return (
     <section
       className={clsx(
-        'w-full min-h-svh h-dvh flex relative whitespace-pre-line bg-linear-to-l from-white via-white/70 to-white/15',
+        `w-full min-h-dvh h-auto flex relative max-md:justify-center
+        lg:whitespace-pre-line whitespace-normal
+         bg-linear-to-l from-white via-white/70 md:to-white/15 to-white/40`,
         order !== 'img&text' && 'bg-linear-to-r',
       )}
     >
@@ -19,14 +21,14 @@ export function GradientSection({ order, className = {}, info }) {
         infoType={info.type}
         titleSize='base'
         className={clsx(
-          'z-20 px-25',
+          'z-20 lg:px-25 px-10 max-md:w-auto my-[5%]',
           order === 'img&text' && 'ml-auto',
           infoClassName,
         )}
       ></InfoColumn>
       <ImageColumn
         imageSrc={info.backSrc}
-        className={clsx('absolute w-full -z-10', imgClassName)}
+        className={clsx('absolute w-full -z-10 h-full', imgClassName)}
       ></ImageColumn>
     </section>
   );

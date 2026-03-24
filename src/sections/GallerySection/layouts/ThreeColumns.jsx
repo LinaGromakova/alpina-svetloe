@@ -11,13 +11,13 @@ export function ThreeColumns({
   w2,
 }) {
   return (
-    <article className='flex gap-4'>
+    <article className='flex gap-4 max-md:gap-2'>
       <img
         className={clsx('object-cover object-center', w1)}
         src={srcOne}
         alt={altOne}
       />
-      <div className={clsx('flex flex-col gap-4 ', w2)}>
+      <div className={clsx('flex flex-col gap-4 max-md:gap-2', w2)}>
         <img
           className={clsx('object-cover object-center w-full')}
           src={srcTwo}

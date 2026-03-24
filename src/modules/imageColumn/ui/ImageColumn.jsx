@@ -1,12 +1,12 @@
 import clsx from 'clsx';
 
-export function ImageColumn({ imageSrc, className }) {
+export function ImageColumn({ imageSrc, className, fit }) {
   return (
-    <div className={clsx('h-full', className)}>
+    <div className={clsx('self-stretch', className)}>
       <img
         src={imageSrc}
         alt='imageColumn'
-        className='h-full w-full object-cover'
+        className={clsx('h-full w-full', fit ? fit : 'object-cover')}
       />
     </div>
   );

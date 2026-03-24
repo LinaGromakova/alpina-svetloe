@@ -1,10 +1,11 @@
 import clsx from 'clsx';
 import { CaptionTitle } from '../CaptionTitle';
+
 export function Paragraph({ text, bold, className, title }) {
   return (
     <p
       className={clsx(
-        'text-2xl pb-4',
+        'text-xl lg:text-2xl pb-4',
         bold ? 'text-dark-blue font-bold' : 'text-foreground',
         className,
       )}

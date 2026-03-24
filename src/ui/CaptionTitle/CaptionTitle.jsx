@@ -1,5 +1,7 @@
 export function CaptionTitle({ text }) {
   return (
-    <span className='text-2xl font-bold text-dark-blue'>{text + ' '}</span>
+    <span className='lg:text-2xl text-xl font-bold text-dark-blue'>
+      {text + ' '}
+    </span>
   );
 }

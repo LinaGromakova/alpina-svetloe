@@ -1,23 +1,30 @@
 import clsx from 'clsx';
 import { ImageColumn } from '../../modules/imageColumn/ui';
 import { InfoColumn } from '../../modules/InfoColumn/ui';
+import { styleForAdaptive } from './styleForAdaptive/styleForAdaptive';
 
 export function InfoSection({ order, className = {}, info }) {
-  const { imgClassName, infoClassName, containerStyles, parSize } = className;
+  const { imgClassName, infoClassName, containerStyles, parSize, imgFit } =
+    className;
+  const { sectionStyles, imgStyles, infoStyles } =
+    styleForAdaptive[info.typeAdaptive];
   return (
     <section
       className={clsx(
-        ' flex relative whitespace-pre-line justify-between items-center',
+        `flex bg-white h-auto relative lg:whitespace-pre-line 
+        whitespace-normal justify-between max-md:justify-center items-center min-h-dvh`,
         order === 'img&text' ? 'flex-row' : 'flex-row-reverse',
-        containerStyles || 'min-h-svh h-dvh max-h-lh',
+        containerStyles,
+        sectionStyles,
       )}
     >
       <ImageColumn
         imageSrc={info.imgSrc}
-        className={imgClassName}
+        fit={imgFit}
+        className={clsx(imgStyles, imgClassName)}
       ></ImageColumn>
       <InfoColumn
-        className={clsx('bg-white', infoClassName)}
+        className={clsx('bg-white py-[2%]', infoStyles, infoClassName)}
         logo={info.logo}
         title={info.title}
         parSize={parSize}

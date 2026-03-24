@@ -11,8 +11,8 @@ export const GALLERY_ITEMS = [
     type: 'two',
     srcOne: images.src3,
     srcTwo: images.src4,
-    w1: 'w-4/5',
-    w2: 'w-2/5',
+    w1: 'w-7/12',
+    w2: 'w-5/12',
   },
   {
     type: 'two',

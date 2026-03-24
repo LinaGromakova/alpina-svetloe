@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import LogoImage from './assets/logo.png';
+import LogoImage from './assets/logo.webp';
 import { styles } from './styles/styles';
 
 export function Logo({ variant, className }) {

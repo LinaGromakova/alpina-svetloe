@@ -2,15 +2,16 @@ import * as images from '../assets/index.js';
 export const SECTIONS = [
   {
     order: 'img&text',
+    typeAdaptive: 'fullscreen',
     sectionType: 'infoBlock',
     logo: {
       variant: 'sm',
-      styles: 'absolute right-16 bottom-10',
+      styles:
+        'absolute right-16 bottom-10 max-md:bottom-2 max-md:right-2 max-sm:relative max-sm:order-3 max-sm:mx-auto',
     },
     type: 'paragraph',
     imgSrc: images.src1,
     title: `Альпина Светлое — \n Ваш капитал в стиле шале. \nВаш отдых — круглый год`,
-
     data: [
       {
         text: `Эксклюзивный закрытый поселок 
@@ -23,10 +24,14 @@ export const SECTIONS = [
       },
       { text: 'Старт продаж: Март 2026', bold: true },
     ],
-    styles: { imgClassName: 'w-2/5', infoClassName: 'max-w-3/5 px-25' },
+    styles: {
+      imgClassName: 'w-2/5',
+      infoClassName: 'max-w-3/5 lg:px-25 px-10 ',
+    },
   },
   {
     order: 'text&img',
+    typeAdaptive: 'fullscreen',
     type: 'paragraph',
     sectionType: 'gradientBlock',
     backSrc: images.src2,
@@ -43,10 +48,11 @@ export const SECTIONS = [
 `,
       },
     ],
-    styles: { parSize: 'w-[500px]' },
+    styles: { parSize: 'max-w-[500px]' },
   },
   {
     order: 'img&text',
+    typeAdaptive: 'cards',
     sectionType: 'infoBlock',
     type: 'paragraph',
     imgSrc: images.src3,
@@ -73,13 +79,14 @@ export const SECTIONS = [
       },
     ],
     styles: {
-      imgClassName: 'w-full',
-      infoClassName: 'w-[45%] px-20',
-      containerStyles: 'h-[150dvh]',
+      imgFit: 'object-contain',
+      imgClassName: 'w-full bg-linear-to-b from-green from-40% to-dark-green',
+      infoClassName: 'lg:w-[45%] w-10/12 lg:px-20 px-10',
     },
   },
   {
     order: 'img&text',
+    typeAdaptive: 'fullscreen',
     sectionType: 'gradientBlock',
     type: 'list',
     backSrc: images.src4,
@@ -95,11 +102,12 @@ export const SECTIONS = [
     ],
     styles: {
       imgClassName: '',
-      infoClassName: 'w-1/2 px-25',
+      infoClassName: 'w-1/2 lg:px-25 px-10',
     },
   },
   {
     order: 'img&text',
+    typeAdaptive: 'fullscreen',
     sectionType: 'infoCardBlock',
     type: 'list',
     backSrc: images.src5,
@@ -117,13 +125,14 @@ export const SECTIONS = [
     ],
     styles: {
       imgClassName: '',
-      parSize: 'w-[350px]',
+      parSize: 'max-w-[350px]',
       infoClassName:
-        'py-7 mx-10 w-130.5 from-white from-20% via-white/50 via-40% to-white/15',
+        'py-7 w-130.5 from-white from-20% via-white/50 via-40% to-white/15',
     },
   },
   {
     order: 'text&img',
+    typeAdaptive: 'fullscreen',
     sectionType: 'infoCardBlock',
     type: 'list',
     backSrc: images.src2,
@@ -147,15 +156,18 @@ export const SECTIONS = [
       },
     ],
     styles: {
-      containerStyles: 'px-[4%] py-[12%]',
-      infoClassName: `relative from-white/80 from-75%
+      containerStyles: 'px-[4%] py-[12%] max-md:py-[20%]',
+      infoClassName: `relative from-white/80 from-75% w-[500px]
         to-white/40 py-1 before:content-["Архитектурная_концепция"] 
-        before:block before:absolute
-        before:-top-17 before:left-0 before:text-light-beige before:font-bold before:text-5xl before:whitespace-nowrap`,
+        before:block before:absolute max-md:before:text-4xl
+        before:-top-20 before:left-0 max-md:before:left-auto
+        before:text-light-beige before:font-bold before:text-5xl 
+        md:before:whitespace-nowrap whitespace-normal`,
     },
   },
   {
     order: 'text&img',
+    typeAdaptive: 'fullscreen',
     sectionType: 'infoBlock',
     type: 'list',
     imgSrc: images.src6,
@@ -187,13 +199,14 @@ export const SECTIONS = [
       },
     ],
     styles: {
-      imgClassName: 'w-3/5',
-      infoClassName: 'px-25',
+      imgClassName: 'w-1/2',
+      infoClassName: 'lg:px-25 px-10 w-1/2',
     },
   },
   { sectionType: 'gallery' },
   {
     order: 'img&text',
+    typeAdaptive: 'fullscreen',
     sectionType: 'infoBlock',
     type: 'list',
     imgSrc: images.src7,
@@ -214,13 +227,14 @@ export const SECTIONS = [
     ],
     styles: {
       imgClassName: 'w-4/5',
-      infoClassName: 'px-25 w-3/5',
+      infoClassName: 'w-3/5 lg:px-25 px-10',
       parSize: 'max-w-[300px]',
     },
   },
   {
     order: 'img&text',
     sectionType: 'infoBlock',
+    typeAdaptive: 'cards',
     type: 'paragraph',
     imgSrc: images.src8,
     title: `Поселковая \n инфраструктура \n «под ключ»`,
@@ -255,16 +269,17 @@ export const SECTIONS = [
     ],
     styles: {
       imgClassName: 'w-1/2',
-      infoClassName: 'w-1/2 px-15',
+      infoClassName: 'w-1/2 px-15 px-10',
       parSize: 'inline-block',
     },
   },
   {
     order: 'text&img',
     sectionType: 'gradientBlock',
+    typeAdaptive: 'fullscreen',
     logo: {
       variant: 'md',
-      styles: 'mb-8 ml-8',
+      styles: 'sm:mb-8 sm:ml-10 ml-5 mb-4',
     },
     type: 'list',
     backSrc: images.src9,
@@ -289,10 +304,11 @@ export const SECTIONS = [
         text: 'Готовность к эксплуатации: минимум скрытых затрат, быстрый старт для проживания или аренды',
       },
     ],
-    styles: { parSize: 'w-[475px]' },
+    styles: { parSize: 'max-w-[475px]' },
   },
   {
     order: 'img&text',
+    typeAdaptive: 'fullscreen',
     sectionType: 'infoBlock',
     type: 'list',
     imgSrc: images.src10,
@@ -320,12 +336,13 @@ export const SECTIONS = [
   вечер у камина — всё в одном месте.`,
     styles: {
       imgClassName: 'w-1/2',
-      infoClassName: 'w-1/2 px-25',
-      parSize: 'w-[380px]',
+      infoClassName: 'w-1/2 lg:px-25 px-10',
+      parSize: 'max-w-[380px]',
     },
   },
   {
     order: 'img&text',
+    typeAdaptive: 'fullscreen',
     sectionType: 'infoCardBlock',
     type: 'paragraph',
     backSrc: images.src2,
@@ -367,11 +384,15 @@ export const SECTIONS = [
     ],
     styles: {
       infoClassName:
-        'from-white from-40% via-90% via-white/60  to-white/60 right-[4%] py-10 px-10',
-      parSize: `w-[600px] nth-of-type-5:w-[450px] nth-of-type-5:ml-auto
-              nth-of-type-6:w-[450px] nth-of-type-6:ml-auto nth-of-type-6:-mb-4
+        'from-white from-40% via-90% via-white/60  to-white/60 py-10 px-10',
+      parSize: `max-w-[600px] nth-of-type-5:max-w-[450px] nth-of-type-5:ml-auto
+              nth-of-type-6:max-w-[450px] nth-of-type-6:ml-auto nth-of-type-6:-mb-4
               nth-of-type-5:-mb-4 nth-of-type-7:-mb-4
-              nth-of-type-7:w-[450px] nth-of-type-7:ml-auto`,
+              nth-of-type-7:max-w-[450px] nth-of-type-7:ml-auto
+              max-md:nth-of-type-5:max-w-[260px]
+              max-md:nth-of-type-6:max-w-[260px]
+              max-md:nth-of-type-7:max-w-[260px]
+              `,
     },
   },
 ];

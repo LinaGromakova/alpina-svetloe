@@ -1,6 +1,6 @@
 import { GallerySection } from './sections/GallerySection';
 import { PreviewSection } from './sections/PreviewSection';
-import { SECTIONS } from './constants/SECTIONS.JS';
+import { SECTIONS } from './constants/SECTIONS';
 import { SECTION_COMPONENTS } from './constants/SECTION_COMPONENTS';
 
 function App() {
