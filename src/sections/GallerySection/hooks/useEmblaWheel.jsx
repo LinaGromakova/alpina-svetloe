@@ -6,6 +6,7 @@ export function useEmblaWheel(emblaApi) {
     const emblaNode = emblaApi.rootNode();
     const onWheel = (e) => {
       if (Math.abs(e.deltaY) < Math.abs(e.deltaX)) return;
+      e.stopImmediatePropagation();
       e.preventDefault();
       if (e.deltaY > 0) emblaApi.scrollNext();
       else emblaApi.scrollPrev();

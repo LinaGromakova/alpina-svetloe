@@ -2,10 +2,12 @@ import { GallerySection } from './sections/GallerySection';
 import { PreviewSection } from './sections/PreviewSection';
 import { SECTIONS } from './constants/SECTIONS';
 import { SECTION_COMPONENTS } from './constants/SECTION_COMPONENTS';
+import { useLenis } from './hooks/useLenis';
 
 function App() {
+  useLenis();
   return (
-    <div className='font-sans w-full h-full'>
+    <div className='font-sans w-full'>
       <PreviewSection />
       {SECTIONS.map((section, index) => {
         const Component =
