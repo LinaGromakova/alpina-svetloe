@@ -1,9 +1,14 @@
+'use client';
 import clsx from 'clsx';
+import { motion } from 'framer-motion';
 
 export function Link({ href, text, filled, className }) {
   return (
-    <a
+    <motion.a
       href={href}
+      initial={{ opacity: 0, x: 10 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.8, delay: 0.6 }}
       className={clsx(
         'text-gray hover:text-dark-blue transition-colors',
         filled &&
@@ -12,6 +17,6 @@ export function Link({ href, text, filled, className }) {
       )}
     >
       {text}
-    </a>
+    </motion.a>
   );
 }

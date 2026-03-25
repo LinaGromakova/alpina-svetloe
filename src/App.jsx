@@ -7,7 +7,7 @@ import { useLenis } from './hooks/useLenis';
 function App() {
   useLenis();
   return (
-    <div className='font-sans w-full'>
+    <div className='font-sans w-full overflow-x-hidden'>
       <PreviewSection />
       {SECTIONS.map((section, index) => {
         const Component =

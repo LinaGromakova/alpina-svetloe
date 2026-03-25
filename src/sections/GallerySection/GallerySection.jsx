@@ -1,7 +1,7 @@
 import { GALLERY_ITEMS } from './constants/GALLERY_ITEMS';
 import useEmblaCarousel from 'embla-carousel-react';
 import { useEmblaWheel } from './hooks/useEmblaWheel';
-
+import { motion } from 'framer-motion';
 export function GallerySection() {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
@@ -13,7 +13,11 @@ export function GallerySection() {
 
   return (
     <section className='max-w-full md:my-[5%] my-[10%] h-auto overflow-hidden px-4 max-md:px-2'>
-      <div
+      <motion.div
+        initial={{ opacity: 0, x: 20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ amount: 0.2 }}
+        transition={{ duration: 0.5, ease: 'easeOut' }}
         className='overflow-hidden active:cursor-grabbing'
         ref={emblaRef}
       >
@@ -26,15 +30,16 @@ export function GallerySection() {
               >
                 <img
                   key={index}
+                  loading='lazy'
                   src={item.src}
                   alt=''
-                  className='w-95 h-112.5 rounded-2xl object-cover mx-5 select-none cursor-grabbing'
+                  className='w-85 h-112.5 rounded-2xl object-cover mx-5 select-none cursor-grabbing'
                 />
               </div>
             );
           })}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

@@ -12,9 +12,14 @@ export function GradientSection({ order, className = {}, info }) {
         lg:whitespace-pre-line whitespace-normal
          bg-linear-to-l from-white via-white/70 md:to-white/15 to-white/40`,
         order !== 'img&text' && 'bg-linear-to-r',
+        info.circleGallery && 'max-md:flex-col',
       )}
     >
-      {info.circleGallery && <GalleryLayout images={info.circleGallery} />}
+      {info.circleGallery && (
+        <div className='h-full mx-auto xl:my-[5%] my-auto max-md:mt-[5%]'>
+          <GalleryLayout images={info.circleGallery} />
+        </div>
+      )}
       <InfoColumn
         title={info.title}
         parSize={parSize}
@@ -24,7 +29,6 @@ export function GradientSection({ order, className = {}, info }) {
         titleSize='base'
         className={clsx(
           'z-20 lg:px-25 px-10 max-md:w-auto my-[5%]',
-          order === 'img&text' && 'ml-auto',
           infoClassName,
         )}
       ></InfoColumn>
