@@ -8,7 +8,7 @@ export function GradientSection({ order, className = {}, info }) {
   return (
     <section
       className={clsx(
-        `w-full min-h-dvh h-auto flex relative max-md:justify-center mt-[2.5%]
+        `w-full min-h-dvh h-auto flex relative max-md:justify-center md:mt-[2.5%] mt-[10%]
         lg:whitespace-pre-line whitespace-normal
          bg-linear-to-l from-white via-white/70 md:to-white/15 to-white/40`,
         order !== 'img&text' && 'bg-linear-to-r',
