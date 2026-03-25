@@ -5,11 +5,13 @@ export function TwoColumns({ srcOne, altOne, srcTwo, altTwo, w1, w2 }) {
     <article className='flex gap-4 max-md:gap-2 max-w-full '>
       <img
         className={clsx('object-cover object-center', w1)}
+        loading='lazy'
         src={srcOne}
         alt={altOne}
       />
       <img
         className={clsx('object-cover object-center', w2)}
+        loading='lazy'
         src={srcTwo}
         alt={altTwo}
       />

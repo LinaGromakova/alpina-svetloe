@@ -90,6 +90,12 @@ export const SECTIONS = [
     sectionType: 'gradientBlock',
     type: 'list',
     backSrc: images.src4,
+    circleGallery: [
+      { srcCircle: images.srcCicle2 },
+      { srcCircle: images.srcCicle1 },
+      { srcCircle: images.srcCicle4 },
+      { srcCircle: images.srcCicle3 },
+    ],
     title: `«Золотая Долина» —\n ваш личный пропуск \n к склонам`,
     data: [
       { text: `12 горнолыжных трасс разного уровня сложности` },

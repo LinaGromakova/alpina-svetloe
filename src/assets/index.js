@@ -8,3 +8,8 @@ export { default as src7 } from './fire-pit-lounge.webp';
 export { default as src8 } from './backyard-playground-and-firepit.webp';
 export { default as src9 } from './forest-village-aerial-view.webp';
 export { default as src10 } from './family-ski-vacation-dark-chalet.webp';
+
+export { default as srcCicle1 } from './skier-selfie-mountains.webp';
+export { default as srcCicle2 } from './ski-slope-sunny-day.webp';
+export { default as srcCicle3 } from './snowboarders-on-track.webp';
+export { default as srcCicle4 } from './mountain-cafe-exterior.webp';

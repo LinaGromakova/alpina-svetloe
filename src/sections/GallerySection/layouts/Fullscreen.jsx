@@ -3,6 +3,7 @@ export function Fullscreen({ src, altImage }) {
     <article className='w-full'>
       <img
         className='w-full'
+        loading='lazy'
         src={src}
         alt={altImage}
       />

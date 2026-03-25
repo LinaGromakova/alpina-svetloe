@@ -1,6 +1,13 @@
-export function CaptionTitle({ text }) {
+import clsx from 'clsx';
+
+export function CaptionTitle({ text, className }) {
   return (
-    <span className='lg:text-2xl text-xl font-bold text-dark-blue'>
+    <span
+      className={clsx(
+        'lg:text-2xl text-xl font-bold text-dark-blue',
+        className,
+      )}
+    >
       {text + ' '}
     </span>
   );

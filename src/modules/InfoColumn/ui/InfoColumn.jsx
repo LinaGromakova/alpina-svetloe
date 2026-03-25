@@ -3,6 +3,7 @@ import { MainTitle } from '../../../ui/MainTitle';
 import { Paragraph } from '../../../ui/Paragraph';
 import { ListItem } from '../../../ui/ListItem';
 import { Logo } from '../../../ui/Logo';
+import { CaptionTitle } from '../../../ui/CaptionTitle';
 
 export function InfoColumn({
   className,
@@ -33,7 +34,10 @@ export function InfoColumn({
         titleSize={titleSize}
       ></MainTitle>
       {subtitle && (
-        <h4 className='text-2xl font-bold text-dark-blue mb-6'>{subtitle}</h4>
+        <CaptionTitle
+          text={subtitle}
+          className='mb-6'
+        ></CaptionTitle>
       )}
       {infoType === 'list' ? (
         <ul className='list-disc'>
