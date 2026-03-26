@@ -7,7 +7,7 @@ export function InfoCardSection({ order, className = {}, info }) {
   return (
     <section
       className={clsx(
-        `w-full min-h-dvh h-auto flex relative  md:mt-[2.5%] mt-[10%]
+        `w-full min-h-dvh h-auto flex relative
         max-md:items-center lg:whitespace-pre-line whitespace-normal max-md:justify-center`,
         containerStyles || 'items-center',
       )}

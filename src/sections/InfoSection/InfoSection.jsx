@@ -11,7 +11,7 @@ export function InfoSection({ order, className = {}, info }) {
   return (
     <section
       className={clsx(
-        `flex bg-white h-auto relative lg:whitespace-pre-line md:mt-[2.5%] mt-[10%]
+        `flex bg-white h-auto relative lg:whitespace-pre-line
         whitespace-normal justify-between max-md:justify-center items-center min-h-dvh`,
         order === 'img&text' ? 'flex-row' : 'flex-row-reverse',
         containerStyles,
