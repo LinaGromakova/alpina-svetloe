@@ -1,6 +1,6 @@
+import { motion } from 'framer-motion';
 import clsx from 'clsx';
 import { CaptionTitle } from '../CaptionTitle';
-import { motion } from 'framer-motion';
 
 export function Paragraph({ text, bold, className, title }) {
   return (

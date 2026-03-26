@@ -1,21 +1,11 @@
 import clsx from 'clsx';
 import { MainTitle } from '../../../ui/MainTitle';
-import { Paragraph } from '../../../ui/Paragraph';
-import { ListItem } from '../../../ui/ListItem';
 import { Logo } from '../../../ui/Logo';
 import { CaptionTitle } from '../../../ui/CaptionTitle';
+import { ContentLayout } from '../layouts/ContentLayout';
 
-export function InfoColumn({
-  className,
-  title,
-  info,
-  parSize,
-  infoType,
-  subtitle,
-  titleSize,
-  signature,
-  logo,
-}) {
+export function InfoColumn({ className, content, parSize, titleOrder }) {
+  const { title, subtitle, logo } = content || {};
   return (
     <article
       className={clsx(
@@ -27,49 +17,23 @@ export function InfoColumn({
         <Logo
           variant={logo.variant}
           className={logo.styles}
-        ></Logo>
+        />
       )}
       <MainTitle
         text={title}
-        titleSize={titleSize}
-      ></MainTitle>
+        first={titleOrder}
+        titleSize='base'
+      />
       {subtitle && (
         <CaptionTitle
           text={subtitle}
           className='mb-6'
-        ></CaptionTitle>
+        />
       )}
-      {infoType === 'list' ? (
-        <ul className='list-disc'>
-          {info.map((el, index) => (
-            <ListItem
-              key={index}
-              text={el.text}
-              className={parSize}
-              bold={el.bold}
-            ></ListItem>
-          ))}
-          {signature && (
-            <Paragraph
-              text={signature}
-              bold
-              className='ml-6'
-            ></Paragraph>
-          )}
-        </ul>
-      ) : (
-        <>
-          {info.map((el, index) => (
-            <Paragraph
-              key={index}
-              title={el?.title}
-              text={el.text}
-              bold={el.bold}
-              className={parSize}
-            ></Paragraph>
-          ))}
-        </>
-      )}
+      <ContentLayout
+        content={content}
+        parSize={parSize}
+      />
     </article>
   );
 }

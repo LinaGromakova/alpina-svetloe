@@ -13,7 +13,7 @@ export function ImageColumn({ imageSrc, className, fit }) {
       <img
         src={imageSrc}
         loading='lazy'
-        alt='imageColumn'
+        alt='imageBackgroundColumn'
         className={clsx('h-full w-full', fit ? fit : 'object-cover')}
       />
     </motion.div>

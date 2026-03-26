@@ -3,39 +3,41 @@ import { ImageColumn } from '../../modules/imageColumn/ui';
 import { InfoColumn } from '../../modules/InfoColumn/ui';
 import { GalleryLayout } from './GalleryLayout/GalleryLayout';
 
-export function GradientSection({ order, className = {}, info }) {
-  const { imgClassName, infoClassName, parSize } = className;
+export function GradientSection({ section, first }) {
+  const { layout, content, media, styles } = section;
+  const hasCircleGallery = content?.circleGallery?.length > 0;
+
   return (
     <section
       className={clsx(
-        `w-full min-h-dvh h-auto flex relative max-md:justify-center
+        `w-full min-h-dvh h-auto flex relative max-md:justify-center md:mt-[2.5%] mt-[10%]
         lg:whitespace-pre-line whitespace-normal
-         bg-linear-to-l from-white via-white/70 md:to-white/15 to-white/40`,
-        order !== 'img&text' && 'bg-linear-to-r',
-        info.circleGallery && 'max-md:flex-col',
+        bg-linear-to-l from-white via-white/70 md:to-white/15 to-white/40`,
+        layout?.order !== 'img&text' && 'bg-linear-to-r',
+        hasCircleGallery && 'max-md:flex-col',
+        styles?.container,
       )}
     >
-      {info.circleGallery && (
+      {hasCircleGallery && (
         <div className='h-full mx-auto xl:my-[5%] my-auto max-md:mt-[5%]'>
-          <GalleryLayout images={info.circleGallery} />
+          <GalleryLayout images={content.circleGallery} />
         </div>
       )}
       <InfoColumn
-        title={info.title}
-        parSize={parSize}
-        logo={info.logo}
-        info={info.data}
-        infoType={info.type}
-        titleSize='base'
+        content={content}
+        parSize={styles?.parSize}
+        titleOrder={first}
         className={clsx(
           'z-20 lg:px-25 px-10 max-md:w-auto my-[5%]',
-          infoClassName,
+          styles?.info,
         )}
-      ></InfoColumn>
-      <ImageColumn
-        imageSrc={info.backSrc}
-        className={clsx('absolute w-full -z-10 h-full', imgClassName)}
-      ></ImageColumn>
+      />
+      {media?.type === 'background' && (
+        <ImageColumn
+          imageSrc={media.src}
+          className={clsx('absolute w-full -z-10 h-full', styles?.img)}
+        />
+      )}
     </section>
   );
 }

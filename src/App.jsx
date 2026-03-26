@@ -1,4 +1,3 @@
-import { GallerySection } from './sections/GallerySection';
 import { PreviewSection } from './sections/PreviewSection';
 import { SECTIONS } from './constants/SECTIONS';
 import { SECTION_COMPONENTS } from './constants/SECTION_COMPONENTS';
@@ -10,14 +9,12 @@ function App() {
     <div className='font-sans w-full overflow-x-hidden'>
       <PreviewSection />
       {SECTIONS.map((section, index) => {
-        const Component =
-          SECTION_COMPONENTS[section.sectionType] || GallerySection;
+        const Component = SECTION_COMPONENTS[section.component];
         return (
           <Component
             key={index}
-            order={section.order}
-            className={section.styles}
-            info={section}
+            section={section}
+            first={index === 0}
           />
         );
       })}
