@@ -1,6 +1,6 @@
 # Alpina Svetloe 
 🔗 **[Посмотреть работающий проект](https://www.alpina-svetloe.ru/)** 
-[![Deploy with Vercel](https://vercel.com)](https://alpina-svetloe.vercel.app/)
+🔗 **[Deploy with Vercel](https://vercel.com)](https://alpina-svetloe.vercel.app/)**
 
 **Alpina Svetloe** — это современный, высокопроизводительный сайт-визитка (лендинг) с плавным скроллом и интерактивными анимациями. Проект разработан с акцентом на максимальную оптимизацию и гибкую, расширяемую архитектуру, готовую к будущему масштабированию.
 
